@@ -68,7 +68,7 @@ var wktSchemas = map[string]schemaCore{
 		Format: "int64",
 	},
 	".google.protobuf.Int64Value": {
-		Type:   "string",
+		Type:   "integer",
 		Format: "int64",
 	},
 	".google.protobuf.UInt64Value": {
@@ -853,7 +853,7 @@ func primitiveSchema(t descriptorpb.FieldDescriptorProto_Type) (ftype, format st
 	case descriptorpb.FieldDescriptorProto_TYPE_FLOAT:
 		return "number", "float", true
 	case descriptorpb.FieldDescriptorProto_TYPE_INT64:
-		return "string", "int64", true
+		return "integer", "int64", true
 	case descriptorpb.FieldDescriptorProto_TYPE_UINT64:
 		// 64bit integer types are marshaled as string in the default JSONPb marshaler.
 		// TODO(yugui) Add an option to declare 64bit integers as int64.
