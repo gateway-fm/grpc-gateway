@@ -840,7 +840,9 @@ func schemaOfField(f *descriptor.Field, reg *descriptor.Registry, refs refMap) o
 		ret.XNullable = true
 	}
 
-	fmt.Println(fd.GetName())
+	fmt.Println("######## FULL DUMPING ######")
+	fmt.Println(fmt.Sprintf("%#v", fd))
+	fmt.Println("######### FINISH DUMPING #######")
 
 	if strings.Contains(fd.GetName(), "BigInt") {
 		return openapiSchemaObject{
