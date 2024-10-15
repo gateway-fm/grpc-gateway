@@ -840,6 +840,14 @@ func schemaOfField(f *descriptor.Field, reg *descriptor.Registry, refs refMap) o
 		ret.XNullable = true
 	}
 
+	if strings.Contains(fd.GetName(), "BigInt") {
+		return openapiSchemaObject{
+			schemaCore: schemaCore{
+				Type: "string",
+			},
+		}
+	}
+
 	return ret
 }
 
