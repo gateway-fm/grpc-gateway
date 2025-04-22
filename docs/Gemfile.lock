@@ -242,7 +242,7 @@ GEM
     mutex_m (0.3.0)
     net-http (0.6.0)
       uri
-    nokogiri (1.18.7)
+    nokogiri (1.18.8)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -292,7 +292,7 @@ DEPENDENCIES
   jekyll-relative-links
   jekyll-titles-from-headings
   just-the-docs
-  nokogiri (~> 1.18.4)
+  nokogiri (~> 1.18.8)
 
 BUNDLED WITH
    2.3.26
