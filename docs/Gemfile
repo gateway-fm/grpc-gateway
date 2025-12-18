@@ -10,4 +10,4 @@ group :jekyll_plugins do
   gem 'jekyll-include-cache'         # GitHub Pages
 end
 
-gem "nokogiri", "~> 1.18.8"
+gem "nokogiri", "~> 1.18.9"
