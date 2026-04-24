@@ -868,6 +868,10 @@ func (g *dummyHealthCheckClient) Watch(ctx context.Context, r *grpc_health_v1.He
 	return nil, status.Error(codes.Unimplemented, "unimplemented")
 }
 
+func (g *dummyHealthCheckClient) List(ctx context.Context, r *grpc_health_v1.HealthListRequest, opts ...grpc.CallOption) (*grpc_health_v1.HealthListResponse, error) {
+	return nil, status.Error(codes.Unimplemented, "unimplemented")
+}
+
 func TestServeMux_HandleMiddlewares(t *testing.T) {
 	var mws []int
 	mux := runtime.NewServeMux(runtime.WithMiddlewares(
